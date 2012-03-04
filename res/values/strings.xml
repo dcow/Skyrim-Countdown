@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Skyrim Countdown</string>
+    <string name="releaseDate">11.11.11</string>
+    <string name="finished">I hope you never read this because you should be playing Skyrim..</string>
+	<string name="blank"></string>
+</resources>

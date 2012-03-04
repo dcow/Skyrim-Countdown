@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.dcow.extra.skyrimcountdown"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application 
+    	android:label="@string/app_name" 
+    	android:icon="@drawable/skyrimcountownicon72x72rounded">
+    	
+        <activity android:name="com.dcow.extra.skyrimcountdown.SkyrimCountdown"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+	<receiver android:name="com.dcow.extra.skyrimcountdown.SkyrimWidgetProvider" >
+	    <intent-filter>
+	        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+	        <action android:name="dcow.extra.action.SKYRIM_TICK" />
+	    </intent-filter>
+
+	    <meta-data android:name="android.appwidget.provider"
+	               android:resource="@xml/widgetprovider" />
+	</receiver>
+	
+    </application>
+</manifest>
